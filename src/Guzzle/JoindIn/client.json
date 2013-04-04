@@ -2,5 +2,39 @@
     "name": "Joind In API",
     "baseUrl": "http://api.joind.in/v2.1/?apikey={{apikey}}",
     "operations": {
+        "Events List": {
+            "httpMethod": "GET",
+            "uri": "events",
+            "summary": "List events",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                }
+            },
+            "responseClass": "EventsListOutput"
+        }
+    },
+    "models": {
+        "EventsListOutput": {
+            "type": "object",
+            "properties": {
+                "meta": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "event": {
+                    "type": "array",
+                    "location": "json",
+                    "items": {
+                        "$ref": "Event"
+                    }
+                }
+            }
+        }
     }
 }
