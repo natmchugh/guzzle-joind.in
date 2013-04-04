@@ -1,0 +1,6 @@
+{
+    "name": "Joind In API",
+    "baseUrl": "http://api.joind.in/v2.1/?apikey={{apikey}}",
+    "operations": {
+    }
+}

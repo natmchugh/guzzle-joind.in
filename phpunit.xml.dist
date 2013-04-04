@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./tests/bootstrap.php" colors="true">
+    <php>
+        <server name="API_KEY" value="change_me" />
+    </php>
+    <testsuites>
+        <testsuite name="guzzle-joind-in">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./</directory>
+            <exclude>
+                <directory>./Tests</directory>
+                <directory>./docs</directory>
+                <directory>./coverage</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
