@@ -12,7 +12,7 @@ class JoindInClient extends Client
     public function __construct($baseUrl = '', $config = null)
     {
         $default = array();
-        $required = array('apikey');
+        $required = array();
         $config = Collection::fromConfig($config, $default, $required);
 
         parent::__construct($baseUrl, $config);
@@ -22,11 +22,8 @@ class JoindInClient extends Client
     public function createRequest($method = RequestInterface::GET, $uri = null, $headers = null, $body = null)
     {
         $request = parent::createRequest($method, $uri, $headers, $body);
-
         $request->getQuery()->set('apikey', $this->getConfig()->get('apikey'));
 
         return $request;
     }
-
-
 }

@@ -2,7 +2,7 @@
     "name": "Joind In API",
     "baseUrl": "http://api.joind.in/v2.1/?apikey={{apikey}}",
     "operations": {
-        "Events List": {
+        "getEvents": {
             "httpMethod": "GET",
             "uri": "events",
             "summary": "List events",
@@ -20,14 +20,39 @@
         }
     },
     "models": {
-        "EventsListOutput": {
+        "Event" : {
             "type": "object",
             "properties": {
+                "name": {
+                    "location": "json",
+                    "type": "string"
+                },
+                "start_date": {
+                    "location": "json",
+                    "type": "string"
+                },
+                "end_date": {
+                    "location": "json",
+                    "type": "string"
+                },
+                "description": {
+                    "location": "json",
+                    "type": "string"
+                },
+                "attendee_count": {
+                    "location": "json",
+                    "type": "string"
+                }
+            }
+        },
+        "EventsListOutput": {
+            "type": "object",
+            "properties" : {
                 "meta": {
                     "type": "integer",
                     "location": "json"
                 },
-                "event": {
+                "events" : {
                     "type": "array",
                     "location": "json",
                     "items": {

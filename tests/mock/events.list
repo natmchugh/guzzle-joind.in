@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: Apache
+Content-Type: application/json
+
+{
+    "events": [
+        {
+            "name": "GeekyConf: Explore, Learn & Enjoy",
+            "start_date": "2013-11-20T23:00:00+00:00",
+            "end_date": "2013-11-21T22:59:59+00:00",
+            "description": "GeekyConf is a day celebrating geekiness in all its forms, packed with talks aimed to inspire and entertain. Learn about peoples&#39; passions&#39; and learn about different areas of geeky science, art and culture. \n\nOver 20 speakers from all walks of geeky life will be sharing their passions and interests. We will be announcing more soon. \n\nAs the winter months draw in we hope the passion of GeekyConf will keep you warm and keep your creativity brimming. On the 21st of November Geeks from many walks of life will descend on the eclectic venue that is Oval Space.",
+            "href": null,
+            "attendee_count": 0,
+            "attending": false,
+            "event_comments_count": 0,
+            "icon": null,
+            "tags": [],
+            "uri": "http://test.api.joind.in/v2.1/events/1279",
+            "verbose_uri": "http://test.api.joind.in/v2.1/events/1279?verbose=yes",
+            "comments_uri": "http://test.api.joind.in/v2.1/events/1279/comments",
+            "talks_uri": "http://test.api.joind.in/v2.1/events/1279/talks",
+            "website_uri": "http://joind.in/event/view/1279",
+            "humane_website_uri": "http://joind.in/event/GeekyConf"
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/events?resultsperpage=1&start=0"
+    }
+}

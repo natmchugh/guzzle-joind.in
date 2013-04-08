@@ -12,12 +12,4 @@ class JoindInClientTest extends \Guzzle\Tests\GuzzleTestCase
             'apikey' => $_SERVER['API_KEY']
         ));
     }
-
-    /**
-     * @expectedException InvalidArgumentException
-     */
-    public function testBuilderValidatesCreatesClient()
-    {
-        $client = JoindInClient::factory(array());
-    }
 }
