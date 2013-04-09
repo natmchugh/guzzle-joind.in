@@ -1,0 +1,38 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: Apache
+Content-Type: application/json
+
+{
+    "events": [
+        {
+            "name": "Symfony Live London 2012",
+            "start_date": "2012-09-13T00:00:00+01:00",
+            "end_date": "2012-09-14T23:59:59+01:00",
+            "description": "This event, in the heart of London's vibrant technical scene, brings together the best minds from open source enterprise software development. The newly-formed Sensio Labs UK is delighted to serve up a UK edition of the wildly successful Symfony Live events, with two days of excellent technical content for you to enjoy.\n\nWe hope you'll join us and enjoy our excellent technical session as the worlds of Symfony, Drupal and Plain ol' PHP get together for a day of fun and learning!",
+            "href": "http://london2012.live.symfony.com/",
+            "attendee_count": 59,
+            "attending": false,
+            "event_comments_count": 2,
+            "icon": "logo_london_90x90.png",
+            "tags": [
+                "php",
+                "symfony",
+                "drupal",
+                "london",
+                "sflive"
+            ],
+            "uri": "http://test.api.joind.in/v2.1/events/1000",
+            "verbose_uri": "http://test.api.joind.in/v2.1/events/1000?verbose=yes",
+            "comments_uri": "http://test.api.joind.in/v2.1/events/1000/comments",
+            "talks_uri": "http://test.api.joind.in/v2.1/events/1000/talks",
+            "website_uri": "http://joind.in/event/view/1000",
+            "humane_website_uri": "http://joind.in/event/sflive-london"
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/events/1000?start=0&resultsperpage=20"
+    }
+}
