@@ -1,0 +1,25 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: Apache
+Content-Type: application/json
+
+{
+    "comments": [
+        {
+            "comment": "A really good venue, some great talks, and some amazing people.\n\nMy first even of this kind and I loved every minute of it",
+            "source": null,
+            "created_date": "2012-09-17T17:17:12+01:00",
+            "user_display_name": "David North",
+            "user_uri": "http://test.api.joind.in/v2.1/users/19463",
+            "comment_uri": "http://test.api.joind.in/v2.1/event_comments/780",
+            "verbose_comment_uri": "http://test.api.joind.in/v2.1/event_comments/780?verbose=yes",
+            "event_uri": "http://test.api.joind.in/v2.1/events/1000",
+            "event_comments_uri": "http://test.api.joind.in/v2.1/events/1000/comments"
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/events/1000/comments?format=json&resultsperpage=1&start=1&verbose=yes"
+    }
+}

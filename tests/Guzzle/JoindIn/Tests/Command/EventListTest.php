@@ -12,20 +12,26 @@ class EventListTest extends GuzzleTestCase
     {
         $configPath = __DIR__.'/../../../../../src/Guzzle/JoindIn/client.json';
         $description = ServiceDescription::factory($configPath);
-        $client = new JoindInClient();
+        $client = $this->getServiceBuilder()->get('test.joind.in');
         $client->setDescription($description);
-
-        $command = $client->getCommand('EventsList');
+        $params = array(
+            'format' => 'json',
+            'resultsperpage' => 1,
+            'start' => 1,
+            'verbose' => 'yes',
+            'filter' => 'hot',
+        );
+        $command = $client->getCommand('EventsList', $params);
         $this->setMockResponse($client, 'events.list');
         $response = $client->execute($command);
-        $this->assertContains('api.joind.in/v2.1/events', $command->getRequest()->getUrl());
+        $this->assertContains('api.joind.in/v2.1/events?apikey=secret_key&format=json&resultsperpage=1&start=1&verbose=yes&filter=hot', $command->getRequest()->getUrl());
     }
 
     public function testGetEventsResponse()
     {
         $configPath = __DIR__.'/../../../../../src/Guzzle/JoindIn/client.json';
         $description = ServiceDescription::factory($configPath);
-        $client = new JoindInClient();
+        $client = $this->getServiceBuilder()->get('test.joind.in');
         $client->setDescription($description);
 
         $this->setMockResponse($client, 'events.list');

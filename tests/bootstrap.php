@@ -32,10 +32,10 @@ $loader = require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIREC
 Guzzle\Tests\GuzzleTestCase::setMockBasePath(__DIR__ . DIRECTORY_SEPARATOR . 'mock');
 
 Guzzle\Tests\GuzzleTestCase::setServiceBuilder(Guzzle\Service\Builder\ServiceBuilder::factory(array(
-    'client' => array(
+    'test.joind.in' => array(
         'class' => 'Guzzle\JoindIn\JoindInClient',
         'params' => array(
-            'apikey' => $_SERVER['API_KEY']
+            'apikey' => $_SERVER['API_KEY'],
         )
     )
 )));

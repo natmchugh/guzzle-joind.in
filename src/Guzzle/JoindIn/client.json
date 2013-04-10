@@ -14,6 +14,18 @@
                 "resultsperpage": {
                     "location": "query",
                     "description": "How many results to show per page in the results (zero for no pagination)"
+                },
+                "start": {
+                    "location": "query",
+                    "description": "Which page number of results to show"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "filter": {
+                    "location": "query",
+                    "description": "What kind of event list to return"
                 }
             },
             "responseClass": "EventsListOutput"
@@ -23,6 +35,42 @@
             "uri": "events/{event_id}",
             "summary": "Information about a single event",
             "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "event_id": {
+                    "location": "uri",
+                    "description": "ID of the event whose talks should be returned"
+                }
+            },
+            "responseClass": "EventsListOutput"
+        },
+       "EventComments": {
+            "httpMethod": "GET",
+            "uri": "events/{event_id}/comments",
+            "summary": "Show the comments made on an event",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                },
+                "start": {
+                    "location": "query",
+                    "description": "Which page number of results to show"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
                 "event_id": {
                     "location": "uri",
                     "description": "ID of the event whose talks should be returned"
