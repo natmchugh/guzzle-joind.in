@@ -6,10 +6,10 @@ use Guzzle\Tests\GuzzleTestCase;
 use Guzzle\JoindIn\JoindInClient;
 use Guzzle\Service\Description\ServiceDescription;
 
-class EventCommentsTest extends GuzzleTestCase
+class EventFiltersTest extends GuzzleTestCase
 {
 
-    public function testEventCommentsRequest()
+    public function testEventFiltersRequest()
     {
         $configPath = __DIR__.'/../../../../../src/Guzzle/JoindIn/client.json';
         $description = ServiceDescription::factory($configPath);
@@ -17,22 +17,18 @@ class EventCommentsTest extends GuzzleTestCase
         $client->setDescription($description);
         $params = array(
             'format' => 'json',
-            'resultsperpage' => 1,
-            'start' => 1,
-            'verbose' => 'yes',
-            'event_id' => 1000,
         );
 
-        $command = $client->getCommand('EventComments', $params);
-        $this->setMockResponse($client, 'event.comments');
+        $command = $client->getCommand('EventFilters', $params);
+        $this->setMockResponse($client, 'event.filters');
         $response = $client->execute($command);
         $this->assertContains(
-            'api.joind.in/v2.1/events/1000/comments?format=json&resultsperpage=1&start=1&verbose=yes',
+            'api.joind.in/?format=json',
             $command->getRequest()->getUrl()
         );
     }
 
-    public function testEventCommentsResponse()
+    public function testEventFiltersResponse()
     {
         $configPath = __DIR__.'/../../../../../src/Guzzle/JoindIn/client.json';
         $description = ServiceDescription::factory($configPath);
@@ -40,17 +36,11 @@ class EventCommentsTest extends GuzzleTestCase
         $client->setDescription($description);
         $params = array(
             'format' => 'json',
-            'resultsperpage' => 1,
-            'start' => 1,
-            'verbose' => 'yes',
-            'event_id' => 1000,
         );
 
-        $command = $client->getCommand('EventComments', $params);
-        $this->setMockResponse($client, 'event.comments');
-        $response = $client->EventDetail($params);
-        $comments = $response['comments'];
-        $comment = array_pop($comments);
-        $this->assertSame("http://test.api.joind.in/v2.1/event_comments/780", $comment['comment_uri']);
+        $command = $client->getCommand('EventFilters', $params);
+        $this->setMockResponse($client, 'event.filters');
+        $links = $client->execute($command);
+        $this->assertSame("http://test.api.joind.in/v2.1/events?filter=cfp", $links['open-cfps']);
     }
 }

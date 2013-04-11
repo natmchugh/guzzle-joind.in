@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: JBoss
+Content-Type: application/json
+
+{
+    "events": "http://test.api.joind.in/v2.1/events",
+    "hot-events": "http://test.api.joind.in/v2.1/events?filter=hot",
+    "upcoming-events": "http://test.api.joind.in/v2.1/events?filter=upcoming",
+    "past-events": "http://test.api.joind.in/v2.1/events?filter=past",
+    "open-cfps": "http://test.api.joind.in/v2.1/events?filter=cfp"
+}

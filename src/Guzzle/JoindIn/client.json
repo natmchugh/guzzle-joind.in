@@ -1,10 +1,21 @@
 {
     "name": "Joind In API",
-    "baseUrl": "http://api.joind.in/v2.1/?apikey={{apikey}}",
+    "baseUrl": "http://api.joind.in/",
     "operations": {
+        "EventFilters": {
+            "httpMethod": "GET",
+            "uri": "",
+            "summary": "List of available event lists, sorted in different ways",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                }
+            }
+        },
         "EventsList": {
             "httpMethod": "GET",
-            "uri": "events",
+            "uri": "v2.1/events",
             "summary": "List events",
             "parameters": {
                 "format": {
@@ -32,7 +43,7 @@
         },
        "EventDetail": {
             "httpMethod": "GET",
-            "uri": "events/{event_id}",
+            "uri": "v2.1/events/{event_id}",
             "summary": "Information about a single event",
             "parameters": {
                 "format": {
@@ -52,7 +63,7 @@
         },
        "EventComments": {
             "httpMethod": "GET",
-            "uri": "events/{event_id}/comments",
+            "uri": "v2.1/events/{event_id}/comments",
             "summary": "Show the comments made on an event",
             "parameters": {
                 "format": {

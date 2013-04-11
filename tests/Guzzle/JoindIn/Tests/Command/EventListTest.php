@@ -24,7 +24,7 @@ class EventListTest extends GuzzleTestCase
         $command = $client->getCommand('EventsList', $params);
         $this->setMockResponse($client, 'events.list');
         $response = $client->execute($command);
-        $this->assertContains('api.joind.in/v2.1/events?apikey=secret_key&format=json&resultsperpage=1&start=1&verbose=yes&filter=hot', $command->getRequest()->getUrl());
+        $this->assertContains('api.joind.in/v2.1/events?format=json&resultsperpage=1&start=1&verbose=yes&filter=hot', $command->getRequest()->getUrl());
     }
 
     public function testGetEventsResponse()

@@ -24,7 +24,7 @@ class EventDetailTest extends GuzzleTestCase
         $command = $client->getCommand('EventDetail', $params);
         $this->setMockResponse($client, 'event.detail');
         $response = $client->execute($command);
-        $this->assertContains('api.joind.in/v2.1/events/1000?apikey=secret_key&format=json&verbose=yes', $command->getRequest()->getUrl());
+        $this->assertContains('api.joind.in/v2.1/events/1000?format=json&verbose=yes', $command->getRequest()->getUrl());
     }
 
     public function testEventDetailResponse()

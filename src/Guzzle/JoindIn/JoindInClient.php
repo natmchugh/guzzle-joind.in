@@ -22,8 +22,6 @@ class JoindInClient extends Client
     public function createRequest($method = RequestInterface::GET, $uri = null, $headers = null, $body = null)
     {
         $request = parent::createRequest($method, $uri, $headers, $body);
-        $request->getQuery()->set('apikey', $this->getConfig()->get('apikey'));
-
         return $request;
     }
 }
