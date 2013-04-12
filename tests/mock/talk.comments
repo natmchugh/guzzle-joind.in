@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: JBoss
+Content-Type: application/json
+
+{
+    "comments": [
+        {
+            "rating": 5,
+            "comment": "Good concepts, well presented.",
+            "user_display_name": "Wojciech Sznapka",
+            "talk_title": "Effective Code Reviews",
+            "source": null,
+            "created_date": "2012-09-14T12:09:11+01:00",
+            "uri": "http://test.api.joind.in/v2.1/talk_comments/23367",
+            "verbose_uri": "http://test.api.joind.in/v2.1/talk_comments/23367?verbose=yes",
+            "talk_uri": "http://test.api.joind.in/v2.1/talks/7056",
+            "talk_comments_uri": "http://test.api.joind.in/v2.1/talks/7056/comments",
+            "user_uri": "http://test.api.joind.in/v2.1/users/6795"
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/talks/7056/comments?format=json&resultsperpage=1&start=1&verbose=yes"
+    }
+}

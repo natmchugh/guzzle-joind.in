@@ -88,6 +88,79 @@
                 }
             },
             "responseClass": "EventsListOutput"
+        },
+        "TalksByEvent": {
+            "httpMethod": "GET",
+            "uri": "v2.1/events/{event_id}/talks",
+            "summary": "Show the sessions associated with a particular event",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                },
+                "start": {
+                    "location": "query",
+                    "description": "Which page number of results to show"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "event_id": {
+                    "location": "uri",
+                    "description": "ID of the event whose talks should be returned"
+                }
+            }
+        },
+        "TalkDetails": {
+            "httpMethod": "GET",
+            "uri": "v2.1/talks/{talk_id}",
+            "summary": "Show the sessions associated with a particular event",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "talk_id": {
+                    "location": "uri",
+                    "description": "ID of the talk to show"
+                }
+            }
+        },
+        "TalkComments": {
+            "httpMethod": "GET",
+            "uri": "v2.1/talks/{talk_id}/comments",
+            "summary": "Show the comments made on a talk",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                },
+                "start": {
+                    "location": "query",
+                    "description": "Which page number of results to show"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "talk_id": {
+                    "location": "uri",
+                    "description": "ID of the talk to show"
+                }
+            }
         }
     },
     "models": {

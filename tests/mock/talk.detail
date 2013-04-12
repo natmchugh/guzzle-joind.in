@@ -1,0 +1,36 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: JBoss
+Content-Type: application/json
+
+{
+    "talks": [
+        {
+            "talk_title": "Effective Code Reviews",
+            "talk_description": "Code reviews are a powerful tool in ensuring and maintaining quality in your application, but they can be very difficult to get right. When they're misunderstood or poorly executed, they can even make a bad situation worse.\n\nIn this session I'll use my professional experience to give you some tactics for getting great benefit from code reviews. We'll talk about tools, about process and most importantly about attitude! Whether you're a developer or a technical lead, come along and find out how to perform a genuinely useful code review and provide constructive feedback in the quickest time possible.",
+            "type": "Talk",
+            "start_date": "2012-09-14T10:30:00+01:00",
+            "average_rating": 4,
+            "comments_enabled": 0,
+            "comment_count": 15,
+            "speakers": [
+                {
+                    "speaker_name": "Sebastian Marek",
+                    "speaker_uri": "http://test.api.joind.in/v2.1/users/764"
+                }
+            ],
+            "tracks": [],
+            "uri": "http://test.api.joind.in/v2.1/talks/7056",
+            "verbose_uri": "http://test.api.joind.in/v2.1/talks/7056?verbose=yes",
+            "website_uri": "http://joind.in/talk/view/7056",
+            "comments_uri": "http://test.api.joind.in/v2.1/talks/7056/comments",
+            "verbose_comments_uri": "http://test.api.joind.in/v2.1/talks/7056/comments?verbose=yes",
+            "event_uri": "http://test.api.joind.in/v2.1/events/1000"
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/talks/7056?start=0&resultsperpage=20"
+    }
+}
