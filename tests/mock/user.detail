@@ -1,0 +1,26 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: JBoss
+Content-Type: application/json
+
+
+{
+    "users": [
+        {
+            "username": "natmchugh",
+            "full_name": "Nathaniel McHugh",
+            "twitter_username": null,
+            "last_login": 1365696703,
+            "uri": "http://test.api.joind.in/v2.1/users/793",
+            "verbose_uri": "http://test.api.joind.in/v2.1/users/793?verbose=yes",
+            "website_uri": "http://joind.in/user/view/793",
+            "talks_uri": "http://test.api.joind.in/v2.1/users/793/talks/",
+            "attended_events_uri": "http://test.api.joind.in/v2.1/users/793/attended/"
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/users/793?format=json&verbose=yes&start=0&resultsperpage=20"
+    }
+}

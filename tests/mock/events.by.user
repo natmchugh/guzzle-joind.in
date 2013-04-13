@@ -1,0 +1,59 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: JBoss
+Content-Type: application/json
+
+{
+    "events": [
+        {
+            "name": "Dutch PHP Conference 2011",
+            "start_date": "2011-05-19T00:00:00+02:00",
+            "end_date": "2011-05-21T23:59:59+02:00",
+            "description": "Ibuildings is proud to organise the fifth Dutch PHP Conference on May 20 and 21, plus a pre-conference tutorial day on May 19. Both programs will be completely in English so the only Dutch thing about it is the location. Keywords for these days: Know-how, Technology, Best Practices, Networking, Tips & Tricks.",
+            "href": "http://www.phpconference.nl/",
+            "icon": "icon-90x90.png",
+            "latitude": 52.33971,
+            "longitude": 4.8905252,
+            "tz_continent": "Europe",
+            "tz_place": "Amsterdam",
+            "location": "Amsterdam RAI",
+            "hashtag": "dpc11",
+            "attendee_count": 144,
+            "attending": false,
+            "comments_enabled": 0,
+            "event_comments_count": 7,
+            "cfp_start_date": null,
+            "cfp_end_date": null,
+            "cfp_url": null,
+            "tags": [
+                "dpc"
+            ],
+            "uri": "http://test.api.joind.in/v2.1/events/603",
+            "verbose_uri": "http://test.api.joind.in/v2.1/events/603?verbose=yes",
+            "comments_uri": "http://test.api.joind.in/v2.1/events/603/comments",
+            "talks_uri": "http://test.api.joind.in/v2.1/events/603/talks",
+            "website_uri": "http://joind.in/event/view/603",
+            "humane_website_uri": "http://joind.in/event/dpc11",
+            "all_talk_comments_uri": "http://test.api.joind.in/v2.1/events/603/talk_comments",
+            "hosts": [
+                {
+                    "host_name": "Harrie Verveer",
+                    "host_uri": "http://test.api.joind.in/v2.1/users/582"
+                },
+                {
+                    "host_name": "Ibuildings",
+                    "host_uri": "http://test.api.joind.in/v2.1/users/12383"
+                },
+                {
+                    "host_name": "Stefan Koopmanschap",
+                    "host_uri": "http://test.api.joind.in/v2.1/users/29"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/users/793/attended?format=json&resultsperpage=1&start=1&verbose=yes"
+    }
+}

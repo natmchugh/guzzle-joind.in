@@ -161,6 +161,52 @@
                     "description": "ID of the talk to show"
                 }
             }
+        },
+        "UserDetail": {
+            "httpMethod": "GET",
+            "uri": "v2.1/users/{user_id}",
+            "summary": "Show the comments made on a talk",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "user_id": {
+                    "location": "uri",
+                    "description": "ID of the user to be returned"
+                }
+            }
+        },
+        "EventsAttendedByUser": {
+            "httpMethod": "GET",
+            "uri": "v2.1/users/{user_id}/attended",
+            "summary": "List of events attended by a particular user",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                },
+                "start": {
+                    "location": "query",
+                    "description": "Which page number of results to show"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "user_id": {
+                    "location": "uri",
+                    "description": "ID of the user to be returned"
+                }
+            }
         }
     },
     "models": {
