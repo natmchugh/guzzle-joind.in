@@ -207,6 +207,33 @@
                     "description": "ID of the user to be returned"
                 }
             }
+        },
+        "TalksGivenByUser": {
+            "httpMethod": "GET",
+            "uri": "v2.1/users/{user_id}/talks",
+            "summary": "List of talks that this user is one of the speakers for",
+            "parameters": {
+                "format": {
+                    "location": "query",
+                    "description": "Output format as JSON or HTML"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                },
+                "start": {
+                    "location": "query",
+                    "description": "Which page number of results to show"
+                },
+                "verbose": {
+                    "location": "query",
+                    "description": "Whether to return verbose detail in the results"
+                },
+                "user_id": {
+                    "location": "uri",
+                    "description": "ID of the user to be returned"
+                }
+            }
         }
     },
     "models": {

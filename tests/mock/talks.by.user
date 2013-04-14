@@ -1,0 +1,42 @@
+HTTP/1.1 200 OK
+Date: Wed, 01 Apr 2013 12:00:00 GMT
+Connection: close
+Server: JBoss
+Content-Type: application/json
+
+{
+    "talks": [
+        {
+            "talk_title": "Fork it! Parallel processing in PHP",
+            "talk_description": "Most computers these days have more than one processor or core. Why then do we normally only use one of them at a time to run our PHP processes? Furthermore, how can we use PHP to write long running background processes. PHP has process control support in unix environments through the PCNTL extension. Running multiple PHP processes can lead to some unexpected behaviour so there are a few patterns to follow to avoid the pitfalls. Once you have multiple PHP processes running you will probably want to make them talk to each other. We will look at the various techniques for inter process communication. Finally we will look at what turns out to be the hardest part of parallel scripts namely thinking about your problems in a parallel way. I will try and offer some tips on how to start doing this and go about getting more work done at the same time.",
+            "type": null,
+            "slides_link": "https://speakerdeck.com/u/natmchugh/p/fork-it",
+            "language": "English - UK",
+            "start_date": "2012-10-07T11:10:00+01:00",
+            "average_rating": 4,
+            "comments_enabled": 0,
+            "comment_count": 16,
+            "speakers": [
+                {
+                    "speaker_name": "Nathaniel McHugh",
+                    "speaker_uri": "http://test.api.joind.in/v2.1/users/793"
+                }
+            ],
+            "tracks": [
+                {
+                    "track_name": "Track 2 - Sponsored by Inviqa"
+                }
+            ],
+            "uri": "http://test.api.joind.in/v2.1/talks/7002",
+            "verbose_uri": "http://test.api.joind.in/v2.1/talks/7002?verbose=yes",
+            "website_uri": "http://joind.in/talk/view/7002",
+            "comments_uri": "http://test.api.joind.in/v2.1/talks/7002/comments",
+            "verbose_comments_uri": "http://test.api.joind.in/v2.1/talks/7002/comments?verbose=yes",
+            "event_uri": "http://test.api.joind.in/v2.1/events/986"
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "this_page": "http://test.api.joind.in/v2.1/users/793/talks?format=json&resultsperpage=1&start=0&verbose=yes"
+    }
+}
