@@ -1,7 +1,7 @@
 HTTP/1.1 200 OK
 Date: Wed, 01 Apr 2013 12:00:00 GMT
 Connection: close
-Server: JBoss
+Server: Apache
 Content-Type: application/json
 
 {

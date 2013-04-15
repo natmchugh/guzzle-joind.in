@@ -1,0 +1,6 @@
+HTTP/1.1 201 OK
+Date: Mon, 15 Apr 2013 14:12:12 GM
+Connection: Keep-Alive
+location: http://test.api.joind.in/v2.1/talks/1000/comments
+Server: Apache
+Content-Type: text/html

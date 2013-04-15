@@ -116,6 +116,33 @@
                 }
             }
         },
+        "AddANewTalk": {
+            "httpMethod": "POST",
+            "uri": "v2.1/events/{event_id}/talks",
+            "summary": "Create a talk on an event",
+            "parameters": {
+                "event_id": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the event whose talks should be returned"
+                },
+                "talk_title": {
+                    "location": "json",
+                    "type": "string",
+                    "description": "Title of the talk or session"
+                },
+                "talk_description": {
+                    "location": "json",
+                    "type": "string",
+                    "description": "Longer description of the talk contents, or talk abstract"
+                },
+                "start_date": {
+                    "location": "json",
+                    "type": "string",
+                    "description": "Date and time of this talk, in ISO 860 format"
+                }
+            }
+        },
         "TalkDetails": {
             "httpMethod": "GET",
             "uri": "v2.1/talks/{talk_id}",
@@ -159,6 +186,28 @@
                 "talk_id": {
                     "location": "uri",
                     "description": "ID of the talk to show"
+                }
+            }
+        },
+        "AddTalkComment": {
+            "httpMethod": "POST",
+            "uri": "v2.1/talks/{talk_id}/comments",
+            "summary": "Comment on and rate a talk",
+            "parameters": {
+                "talk_id": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the talk to show"
+                },
+                "rating": {
+                    "location": "json",
+                    "type": "integer",
+                    "description": "Title of the talk or session"
+                },
+                "comment": {
+                    "location": "json",
+                    "type": "string",
+                    "description": "Comment on the talk"
                 }
             }
         },

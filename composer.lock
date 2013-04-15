@@ -1,18 +1,18 @@
 {
-    "hash": "ad8eaaf7687927429d626aeb90747944",
+    "hash": "f056f5ee57c93b5e3eb6bb1255e12570",
     "packages": [
         {
             "name": "guzzle/guzzle",
-            "version": "v3.3.1",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "v3.3.1"
+                "reference": "v3.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.3.1",
-                "reference": "v3.3.1",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.4.0",
+                "reference": "v3.4.0",
                 "shasum": ""
             },
             "require": {
@@ -48,6 +48,7 @@
                 "doctrine/cache": "*",
                 "monolog/monolog": "1.*",
                 "phpunit/phpunit": "3.7.*",
+                "psr/log": "1.0.*",
                 "symfony/class-loader": "*",
                 "zend/zend-cache1": "1.12",
                 "zend/zend-log1": "1.12",
@@ -92,21 +93,74 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-03-10 23:05:38"
+            "time": "2013-04-12 05:58:15"
+        },
+        {
+            "name": "shrikeh/teapot",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shrikeh/teapot.git",
+                "reference": "e35ff2c5fa02184efb882e4d8efc5492998bf35f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shrikeh/teapot/zipball/e35ff2c5fa02184efb882e4d8efc5492998bf35f",
+                "reference": "e35ff2c5fa02184efb882e4d8efc5492998bf35f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "pdepend/pdepend": "*",
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phploc/phploc": ">=1.7.4",
+                "phpmd/phpmd": ">=1.4.0",
+                "phpunit/phpunit": "3.7.*",
+                "shrink/phpcpd": "dev-master",
+                "squizlabs/php_codesniffer": "1.*",
+                "zerkalica/php-code-browser": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Teapot": "lib"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barney Hanlon",
+                    "email": "barney@shrikeh.net"
+                }
+            ],
+            "description": "PHP HTTP Response Status library",
+            "homepage": "http://shrikeh.github.com/teapot",
+            "keywords": [
+                "http"
+            ],
+            "support": {
+                "source": "https://github.com/shrikeh/teapot/tree/master",
+                "issues": "https://github.com/shrikeh/teapot/issues"
+            },
+            "time": "2013-04-05 12:04:24"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "v2.2.0-RC3"
+                "reference": "v2.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.2.0-RC3",
-                "reference": "v2.2.0-RC3",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.2.1",
+                "reference": "v2.2.1",
                 "shasum": ""
             },
             "require": {
@@ -149,14 +203,16 @@
             "time": "2013-02-11 11:26:43"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+
+    ],
     "aliases": [
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "shrikeh/teapot": 20
+    },
     "platform": {
         "php": ">=5.3.2"
     },
