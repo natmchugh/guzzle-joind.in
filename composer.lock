@@ -1,18 +1,54 @@
 {
-    "hash": "f056f5ee57c93b5e3eb6bb1255e12570",
+    "hash": "230336641932cefca31aeeb67eb68c59",
     "packages": [
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.4.0",
+            "name": "fishtrap/guzzle-oauth2-plugin",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "v3.4.0"
+                "url": "https://github.com/natmchugh/guzzle-oauth2-plugin.git",
+                "reference": "814e27a541fedfaf791376b16739d4b81a86f839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.4.0",
-                "reference": "v3.4.0",
+                "url": "https://api.github.com/repos/natmchugh/guzzle-oauth2-plugin/zipball/814e27a541fedfaf791376b16739d4b81a86f839",
+                "reference": "814e27a541fedfaf791376b16739d4b81a86f839",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": ">=v3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Fishtrap\\Guzzle": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Nathaniel McHugh",
+                    "email": "nat@fishtrap.co.uk"
+                }
+            ],
+            "description": "An Oauth2 plugin for guzzle",
+            "support": {
+                "source": "https://github.com/natmchugh/guzzle-oauth2-plugin/tree/master",
+                "issues": "https://github.com/natmchugh/guzzle-oauth2-plugin/issues"
+            },
+            "time": "2013-04-17 16:16:19"
+        },
+        {
+            "name": "guzzle/guzzle",
+            "version": "v3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "v3.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.4.1",
+                "reference": "v3.4.1",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +129,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-04-12 05:58:15"
+            "time": "2013-04-16 20:56:26"
         },
         {
             "name": "shrikeh/teapot",
@@ -211,7 +247,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "shrikeh/teapot": 20
+        "shrikeh/teapot": 20,
+        "fishtrap/guzzle-oauth2-plugin": 20
     },
     "platform": {
         "php": ">=5.3.2"
