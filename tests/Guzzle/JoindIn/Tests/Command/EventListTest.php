@@ -8,6 +8,16 @@ use Guzzle\Service\Description\ServiceDescription;
 
 class EventListTest extends GuzzleTestCase
 {
+    public function testConstructWithNoAuthNoException()
+    {
+        $client = JoindInClient::factory();
+        $params = array(
+            'format' => 'json',
+        );
+        $command = $client->getCommand('EventsList', $params);
+        $client->execute($command);
+    }
+
     public function testGetEventsRequest()
     {
         $configPath = __DIR__.'/../../../../../src/Guzzle/JoindIn/client.json';

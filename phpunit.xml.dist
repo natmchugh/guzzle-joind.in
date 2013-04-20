@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="./tests/bootstrap.php" colors="true">
     <php>
-        <server name="API_KEY" value="secret_key" />
+        <server name="API_KEY" value="batman" />
+        <server name="ACCESS_TOKEN" value="nanana" />
     </php>
     <testsuites>
         <testsuite name="guzzle-joind-in">

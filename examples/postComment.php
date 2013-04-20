@@ -7,11 +7,9 @@ require __DIR__.'/../vendor/autoload.php';
 use Guzzle\JoindIn\JoindInClient;
 use Fishtrap\Guzzle\Plugin\OAuth2Plugin;
 
-$client = new JoindInClient();
-$plugin = new Oauth2Plugin(
-    array('token' => 'already_gotten_token'),
+$client = JoindInClient::factory(
+    array('access_token' => 'nanana')
 );
-$client->addSubscriber($plugin);
 $params = array(
     'talk_id' => 1000,
     'rating' => 3,

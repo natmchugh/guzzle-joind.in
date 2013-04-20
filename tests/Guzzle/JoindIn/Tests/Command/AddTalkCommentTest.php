@@ -4,11 +4,43 @@ namespace Guzzle\JoindIn\Tests\Command;
 
 use Guzzle\Tests\GuzzleTestCase;
 use Guzzle\JoindIn\JoindInClient;
+use Guzzle\JoindIn\Exception\AuthErrorException;
 use Guzzle\Service\Description\ServiceDescription;
 use Teapot\StatusCode;
 
 class AddTalkCommentTest extends GuzzleTestCase
 {
+    public function testConstructWitAuth()
+    {
+        $client = JoindInClient::factory(
+            array('access_token' => 'nanana')
+        );
+        $params = array(
+            'talk_id' => 1000,
+            'rating' => 5,
+            'comment' => 'Best talk ever talk.',
+        );
+        $command = $client->getCommand('AddTalkComment', $params);
+        $client->execute($command);
+    }
+
+    public function testConstructWithNoAuthThrowsException()
+    {
+        $client = JoindInClient::factory();
+        $params = array(
+            'talk_id' => 1000,
+            'rating' => 5,
+            'comment' => 'Best talk ever talk.',
+        );
+        $command = $client->getCommand('AddTalkComment', $params);
+        try {
+            $client->execute($command);
+        } catch (AuthErrorException $e) {
+            return;
+        }
+        $this->fail('Expected AuthErrorException not created');
+    }
+
 
     public function testEventCommentsRequest()
     {

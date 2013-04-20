@@ -35,7 +35,8 @@ Guzzle\Tests\GuzzleTestCase::setServiceBuilder(Guzzle\Service\Builder\ServiceBui
     'test.joind.in' => array(
         'class' => 'Guzzle\JoindIn\JoindInClient',
         'params' => array(
-            'apikey' => $_SERVER['API_KEY'],
+            'api_key' => $_SERVER['API_KEY'],
+            'access_token' => $_SERVER['ACCESS_TOKEN'],
         )
     )
 )));
