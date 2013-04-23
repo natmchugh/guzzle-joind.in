@@ -7,7 +7,7 @@ use Guzzle\Service\Client;
 use Guzzle\Service\Description\ServiceDescription;
 use Guzzle\JoindIn\Exception\AuthErrorException;
 use Guzzle\Http\Message\RequestInterface;
-use Fishtrap\Guzzle\Plugin\Oauth2Plugin;
+use Fishtrap\Guzzle\Plugin\OAuth2Plugin;
 
 class JoindInClient extends Client
 {
