@@ -8,7 +8,7 @@ use Guzzle\JoindIn\JoindInClient;
 use Fishtrap\Guzzle\Plugin\OAuth2Plugin;
 
 $client = JoindInClient::factory(
-    array('access_token' => 'nanana')
+    array('access_token' => 'nanana'),
 );
 $params = array(
     'talk_id' => 1000,

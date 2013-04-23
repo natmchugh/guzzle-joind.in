@@ -7,6 +7,7 @@ use Guzzle\Service\Client;
 use Guzzle\Service\Description\ServiceDescription;
 use Guzzle\JoindIn\Exception\AuthErrorException;
 use Guzzle\Http\Message\RequestInterface;
+use Fishtrap\Guzzle\Plugin\Oauth2Plugin;
 
 class JoindInClient extends Client
 {
@@ -24,11 +25,17 @@ class JoindInClient extends Client
     {
         $methodsRequiringAuth = array(RequestInterface::POST, RequestInterface::PUT, RequestInterface::DELETE);
         $accessToken = $this->getConfig('access_token');
-        if (in_array($method, $methodsRequiringAuth) && empty($accessToken)) {
-            throw new AuthErrorException('Need to be logged in to use method '.$method);
+        if (in_array($method, $methodsRequiringAuth)) {
+            if (empty($accessToken)) {
+                throw new AuthErrorException('Need to be logged in to use method '.$method);
+            }
+            $oauth = new Oauth2Plugin(array(
+                'access_token'    => $this->getConfig('access_token'),
+                'token_format' => 'OAuth',
+            ));
+            $this->addSubscriber($oauth);
         }
-        $request = parent::createRequest($method, $uri, $headers, $body);
-        return $request;
+        return parent::createRequest($method, $uri, $headers, $body);
     }
 
     public function buildGrantUrl()

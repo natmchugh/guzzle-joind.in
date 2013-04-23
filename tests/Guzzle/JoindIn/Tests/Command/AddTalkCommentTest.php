@@ -10,7 +10,7 @@ use Teapot\StatusCode;
 
 class AddTalkCommentTest extends GuzzleTestCase
 {
-    public function testConstructWitAuth()
+    public function testExecuteWitAuthDoesNotThrowException()
     {
         $client = JoindInClient::factory(
             array('access_token' => 'nanana')
@@ -21,7 +21,25 @@ class AddTalkCommentTest extends GuzzleTestCase
             'comment' => 'Best talk ever talk.',
         );
         $command = $client->getCommand('AddTalkComment', $params);
+        $this->setMockResponse($client, 'post.talk.comment');
         $client->execute($command);
+    }
+
+    public function testExecuteWitAuthHasAuthHeader()
+    {
+        $client = JoindInClient::factory(
+            array('access_token' => 'nanana')
+        );
+        $params = array(
+            'talk_id' => 1000,
+            'rating' => 5,
+            'comment' => 'Best talk ever talk.',
+        );
+        $command = $client->getCommand('AddTalkComment', $params);
+        $this->setMockResponse($client, 'post.talk.comment');
+        $client->execute($command);
+        $authHeader = $command->getRequest()->getHeader('Authorization');
+        $this->assertSame('OAuth nanana', (string) $authHeader, 'Auth header not correct in post request');
     }
 
     public function testConstructWithNoAuthThrowsException()
@@ -33,6 +51,7 @@ class AddTalkCommentTest extends GuzzleTestCase
             'comment' => 'Best talk ever talk.',
         );
         $command = $client->getCommand('AddTalkComment', $params);
+        $this->setMockResponse($client, 'post.talk.comment');
         try {
             $client->execute($command);
         } catch (AuthErrorException $e) {

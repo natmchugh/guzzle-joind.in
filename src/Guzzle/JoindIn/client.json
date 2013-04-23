@@ -1,6 +1,6 @@
 {
     "name": "Joind In API",
-    "baseUrl": "http://test.api.joind.in/",
+    "baseUrl": "http://api.joind.in/",
     "operations": {
         "EventFilters": {
             "httpMethod": "GET",

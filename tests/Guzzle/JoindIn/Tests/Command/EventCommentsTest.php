@@ -46,9 +46,8 @@ class EventCommentsTest extends GuzzleTestCase
             'event_id' => 1000,
         );
 
-        $command = $client->getCommand('EventComments', $params);
         $this->setMockResponse($client, 'event.comments');
-        $response = $client->EventDetail($params);
+        $response = $client->EventComments($params);
         $comments = $response['comments'];
         $comment = array_pop($comments);
         $this->assertSame("http://test.api.joind.in/v2.1/event_comments/780", $comment['comment_uri']);
