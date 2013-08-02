@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/natmchugh/guzzle-oauth2-plugin.git",
-                "reference": "35d76b6c782714a45549fe5b14d78ecd3ba6d66f"
+                "reference": "f81b1471bbb5ff6a999a8b5718d3a53517eb7714"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/natmchugh/guzzle-oauth2-plugin/zipball/35d76b6c782714a45549fe5b14d78ecd3ba6d66f",
-                "reference": "35d76b6c782714a45549fe5b14d78ecd3ba6d66f",
+                "url": "https://api.github.com/repos/natmchugh/guzzle-oauth2-plugin/zipball/f81b1471bbb5ff6a999a8b5718d3a53517eb7714",
+                "reference": "f81b1471bbb5ff6a999a8b5718d3a53517eb7714",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
                 "source": "https://github.com/natmchugh/guzzle-oauth2-plugin/tree/master",
                 "issues": "https://github.com/natmchugh/guzzle-oauth2-plugin/issues"
             },
-            "time": "2013-04-23 12:25:58"
+            "time": "2013-04-24 11:49:02"
         },
         {
             "name": "guzzle/guzzle",

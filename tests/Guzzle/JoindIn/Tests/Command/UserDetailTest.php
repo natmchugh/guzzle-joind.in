@@ -43,7 +43,7 @@ class UserDetailTests extends GuzzleTestCase
         );
 
         $this->setMockResponse($client, 'user.detail');
-        $response = $client->TalksByEvent($params);
+        $response = $client->UserDetail($params);
         $users = $response['users'];
         $user = array_pop($users);
         $this->assertSame("Nathaniel McHugh", $user['full_name']);
