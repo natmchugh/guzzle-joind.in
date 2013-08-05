@@ -22,7 +22,6 @@
     "require": {
         "php": ">=5.3.2",
         "guzzle/guzzle": ">=3.0.0",
-        "shrikeh/teapot": "dev-master",
         "fishtrap/guzzle-oauth2-plugin": "dev-master"
     },
     "autoload": {
