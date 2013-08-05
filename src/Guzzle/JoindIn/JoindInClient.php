@@ -11,7 +11,7 @@ use Fishtrap\Guzzle\Plugin\OAuth2Plugin;
 
 class JoindInClient extends Client
 {
-    public function __construct($baseUrl = '', $config = null)
+    public function __construct($baseUrl = '', $config = array())
     {
         $default = array();
         $required = array();
