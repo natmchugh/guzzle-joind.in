@@ -21,7 +21,7 @@ class JoindInClient extends Client
         $this->setDescription(ServiceDescription::factory(__DIR__ . DIRECTORY_SEPARATOR . 'client.json'));
     }
 
-    public function createRequest($method = RequestInterface::GET, $uri = null, $headers = null, $body = null)
+    public function createRequest($method = RequestInterface::GET, $uri = null, $headers = null, $body = null, array $options = Array)
     {
         $methodsRequiringAuth = array(RequestInterface::POST, RequestInterface::PUT, RequestInterface::DELETE);
         $accessToken = $this->getConfig('access_token');
